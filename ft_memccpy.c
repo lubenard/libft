@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:14:18 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/13 16:28:11 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:27:44 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 	int i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	while (i < (int)n)
 	{
 		((unsigned char *)s1)[i] = ((unsigned char *)s2)[i];

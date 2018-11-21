@@ -6,13 +6,13 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:48:08 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/15 09:16:58 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/21 12:41:16 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(char const *str)
 {
 	size_t	output;
 	int		i;

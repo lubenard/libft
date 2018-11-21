@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 17:36:32 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/20 14:24:35 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:20:58 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int				ft_isascii(int c);
 int				ft_isalnum(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-int				ft_atoi(char *str);
+int				ft_atoi(char const *str);
 int				ft_strcmp(char const *s1, char const *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_memcmp(void const *s1, void const *s2, size_t n);
@@ -73,8 +73,8 @@ char			*ft_strchr(char const *s, int c);
 char			*ft_strrchr(char const *s, int c);
 char			*ft_strncat(char *dest, char const *src, size_t n);
 char			*ft_itoa(int c);
-char			*ft_strstr(char *s1, char *s2);
-char			*ft_strnstr(char *s1, char *s2, size_t e);
+char			*ft_strstr(char const *s1, char const *s2);
+char			*ft_strnstr(char const *s1, char const *s2, size_t e);
 char			*ft_strnew(size_t n);
 char			*ft_strmap(char const *s1, char (*f)(char));
 char			*ft_strmapi(char const *s1, char (*f)(unsigned int, char));

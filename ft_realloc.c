@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 10:18:43 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/19 10:18:53 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/21 13:56:05 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_realloc(char *str, int size)
 	int		i;
 
 	i = ft_strlen(str) - 1;
-	rep = NULL;
 	if (!(rep = (char*)malloc(sizeof(*rep) * (size + ft_strlen(str)))))
 		return (NULL);
 	while (++i < size)
