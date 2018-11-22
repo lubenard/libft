@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 15:49:50 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/21 15:27:13 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/22 13:54:38 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memcpy(void *s1, void const *s2, size_t n)
 	char	*t2;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
 	t1 = (char *)s1;
 	t2 = (char *)s2;
 	while (i != (int)n)
