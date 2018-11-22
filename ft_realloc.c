@@ -6,7 +6,7 @@
 /*   By: lubenard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 10:18:43 by lubenard          #+#    #+#             */
-/*   Updated: 2018/11/21 13:56:05 by lubenard         ###   ########.fr       */
+/*   Updated: 2018/11/22 16:21:47 by lubenard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_realloc(char *str, int size)
 		rep[i] = str[i];
 		++i;
 	}
-	str = NULL;
+	free(str);
 	return (rep);
 }
