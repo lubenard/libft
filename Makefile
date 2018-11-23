@@ -6,7 +6,7 @@
 #    By: lubenard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:01:46 by lubenard          #+#    #+#              #
-#    Updated: 2018/11/20 00:43:35 by lubenard         ###   ########.fr        #
+#    Updated: 2018/11/23 10:35:20 by lubenard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,13 +78,15 @@ SRC = ft_memset.c \
 
 OBJ = $(SRC:.c=.o)
 
-HEAD = .
+CC=gcc
+
+CFLAGS = -Wall -Wextra -Werror
 
 all:  $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRC) -I$(HEAD)
-	ar rc $(NAME) $(OBJ)
+	$(CC) -c $(CFLAGS) $(SRC)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
