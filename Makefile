@@ -6,7 +6,7 @@
 #    By: lubenard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:01:46 by lubenard          #+#    #+#              #
-#    Updated: 2019/03/10 20:01:40 by lubenard         ###   ########.fr        #
+#    Updated: 2019/03/10 20:58:34 by lubenard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,12 +95,12 @@ $(NAME):$(OBJ)
 	@printf "\033[32m[✓]\033[0m\n"
 
 clean:
-	@printf "\033[31mFclean du projet...\033[0m"
+	@printf "\033[31mFclean de $(NAME)..\033[0m"
 	@rm -f $(OBJ)
 	@printf "\033[32m[✓]\033[0m\n"
 
 fclean: clean
-	@printf "\033[31mFclean du projet...\033[0m"
+	@printf "\033[31mFclean de $(NAME)...\033[0m"
 	@rm -f $(NAME)
 	@printf "\033[32m[✓]\033[0m\n"
 
