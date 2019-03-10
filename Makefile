@@ -6,7 +6,7 @@
 #    By: lubenard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:01:46 by lubenard          #+#    #+#              #
-#    Updated: 2018/11/23 10:35:20 by lubenard         ###   ########.fr        #
+#    Updated: 2019/03/10 20:01:40 by lubenard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,20 +78,31 @@ SRC = ft_memset.c \
 
 OBJ = $(SRC:.c=.o)
 
-CC=gcc
+CC = clang
 
 CFLAGS = -Wall -Wextra -Werror
 
 all:  $(NAME)
 
-$(NAME):
-	$(CC) -c $(CFLAGS) $(SRC)
-	ar rcs $(NAME) $(OBJ)
+$(NAME):$(OBJ)
+	@printf "\033[33mCompilation de $(NAME)...\033[0m"
+	@ar rcs $(NAME) $(OBJ)
+	@printf "\033[32m[✓]\033[0m\n"
+
+%.o : %.c
+	@printf "\033[36mCompilation de $<...\033[0m"
+	@$(CC) -c $(CFLAGS) $< -o $@
+	@printf "\033[32m[✓]\033[0m\n"
 
 clean:
-	rm -f $(OBJ)
+	@printf "\033[31mFclean du projet...\033[0m"
+	@rm -f $(OBJ)
+	@printf "\033[32m[✓]\033[0m\n"
 
 fclean: clean
-	rm -f $(NAME)
+	@printf "\033[31mFclean du projet...\033[0m"
+	@rm -f $(NAME)
+	@printf "\033[32m[✓]\033[0m\n"
+
 
 re: fclean all
